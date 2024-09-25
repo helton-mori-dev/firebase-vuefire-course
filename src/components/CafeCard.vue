@@ -1,10 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-<<<<<<< HEAD
-import { deleteDoc, doc } from 'firebase/firestore'
-=======
 import { deleteDoc, doc } from '@firebase/firestore'
->>>>>>> origin/06-begin
 import { useFirestore } from 'vuefire'
 import BaseButton from '@/components/base/BaseButton.vue'
 import BaseIcon from '@/components/base/BaseIcon.vue'
@@ -59,10 +55,6 @@ const priceSymbol = computed(() => {
 })
 
 const db = useFirestore()
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/06-begin
 async function deleteCafe() {
   await deleteDoc(doc(db, 'cafes', props.docId))
 }
