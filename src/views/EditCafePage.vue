@@ -34,7 +34,7 @@ watch(cafeSource, (cafeSource) => {
 })
 
 async function updateCafe() {
-  const updatedCafeDoc = await updateDoc(docRef, {
+  await updateDoc(docRef, {
     ...editCafe.value,
   })
 }
