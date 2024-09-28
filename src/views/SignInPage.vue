@@ -1,7 +1,12 @@
 <script setup>
 import { ref } from 'vue'
 import { useFirebaseAuth } from 'vuefire'
+<<<<<<< HEAD
 import { createUserWithEmailAndPassword } from 'firebase/auth'
+=======
+import { createUserWithEmailAndPassword } from '@firebase/auth'
+
+>>>>>>> origin/08-begin
 import BaseButton from '@/components/base/BaseButton.vue'
 import BaseContainer from '@/components/base/BaseContainer.vue'
 import BaseCard from '@/components/base/BaseCard.vue'
@@ -14,6 +19,10 @@ const newUser = ref({
 })
 
 const auth = useFirebaseAuth()
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/08-begin
 async function createUser() {
   createUserWithEmailAndPassword(
     auth,
@@ -21,10 +30,9 @@ async function createUser() {
     newUser.value.password
   )
     .then((userCredential) => {
-      // Signed up
+      // Signed in
       const user = userCredential.user
       console.log(user)
-
       // ...
     })
     .catch((error) => {
